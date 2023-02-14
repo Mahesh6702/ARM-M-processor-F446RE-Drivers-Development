@@ -2,17 +2,21 @@
 ## Development of communication protocols libraries by understanding user manual and datasheet microcontroller.
 Testing developed libraries using basic projects.
 ##### Table of Contents  
-[Mcu_strcuture_headerfile](#headers)
+[1.Mcu_strcuture_headerfile](#headers)
 [](#emphasis)  
-[GPIO_headerfile](#headers) 
-[dfljadkfj](#emphasis)  
-[SPI_headerfile](#headers)
-[I2C_headerfile](#headers)
-[GPIO_library](#headers)
-[SPI_library](#headers)
-[I2C_library](#headers)
-
-[dfljadkfj](#emphasis)  
+[2.GPIO_headerfile](#headers) 
+[](#emphasis)   
+[3.SPI_headerfile](#headers)
+[](#emphasis)   
+[4.I2C_headerfile](#headers)
+[](#emphasis)   
+[5.GPIO_library](#headers)
+[](#emphasis)   
+[6.SPI_library](#headers)
+[](#emphasis)   
+[7.I2C_library](#headers)
+[](#emphasis)   
+ 
 ...snip...    
 <This header file contains base address peripherals lieing on all buses <a name="headers"/>
 ## Headers
