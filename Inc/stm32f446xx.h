@@ -12,56 +12,13 @@
 
 #define __vo volatile  // __vo is volatile keyword used for memory location which can changed be any time in the program
 
-
-/******************************************START:Processor Specific Details *****************************************************************
- *
- * ARM Cortex M4 Processor NVIC ISERx register Address
- */
-
-// Macros for interrupt Set-enable Registers
-
-#define NVIC_ISER0                      ((__vo uint32_t*)0xE000E100) // Base address of NVIC_ISER0
-#define NVIC_ISER1                      ((__vo uint32_t*)0xE000E104) // Base address of NVIC_ISER1
-#define NVIC_ISER2                      ((__vo uint32_t*)0xE000E108) // Base address of NVIC_ISER2
-#define NVIC_ISER3                      ((__vo uint32_t*)0xE000E10C) // Base address of NVIC_ISER3
-
-//Macros for Interrupt Clear-enable Registers
-
-#define NVIC_ICER0                       ((__vo uint32_t*)0XE000E180) // Base address of NVIC_ICER0
-#define NVIC_ICER1                       ((__vo uint32_t*)0XE000E184) // Base address of NVIC_ICER1
-#define NVIC_ICER2                       ((__vo uint32_t*)0XE000E188) // Base address of NVIC_ICER2
-#define NVIC_ICER3                       ((__vo uint32_t*)0XE000E18C) // Base address of NVIC_ICER3
-
-// ARm Cortex M4 processor priority Register Address calculation
-
-#define NVIC_PR_BASEADDR                 ((__vo uint32_t*)0xE000E400) // Base address of NVIC_ICER0
-
-
-
-
-// ARm Cortex M4 processor number of priority bits implemented in Priority Register
-
-#define NO_OR_BITS_IMPLEMENTED                4
-
-
-#define FLASH_BASEADDR                   0x08000000U  // Base address of Flash memory
-#define SRAM_BASEADDR                    0x20000000U  // Base address of SRAM
-#define SRMA1_BASEADDR                   0x20000000U  // Base address of SRAM1
-#define SRAM2_BASEADDR                   0x2001C000U  // Base address of SRAM2
-#define ROM__BASEADDR                    0x1FFF0000U  // Base address of ROM memory
-
-
-// defining base address for Busses
+	
 
 #define AHB1_BASEADDR                    0x40020000U  // Base address of AHB1 bus
 #define AHB2_BASEADDR                    0x50000000U  // Base address of AHB2 bus
 #define AHB3_BASEADDR                    0x60000000U  // Base address of AHB3 bus
 #define APB1_BASEADDR                    0x40010000U  // Base address of APB1 bus
 #define APB2_BASEADDR                    0x40000000U  // Base address of APB2 bus
-
-
-// defining base address for Peripherals hanging on AHB1 Bus
-
 #define GPIOA_BASEADDR                   0x40020000U   // Base address of GPIOA
 #define GPIOB_BASEADDR                   0x40020400U   // Base address of GPIOB
 #define GPIOC_BASEADDR                   0x40020800U   // Base address of GPIOC
@@ -70,45 +27,9 @@
 #define GPIOF_BASEADDR                   0x40021400U   // Base address of GPIOF
 #define GPIOG_BASEADDR                   0x40021800U   // Base address of GPIOG
 #define GPIOH_BASEADDR                   0x40021C00U   // Base address of GPIOH
-#define CRC_BASEADDR                     0x40023000U   // Base address of CRC
 #define RCC_BASEADDR                     0x40023800U   // Base address of RCC
-#define Flash_interface_BASEADDR         0x40023C00U   // Base address of Flash interface
-#define BKPSRAM_BASEADDR                 0x40024000U   // Base address of BKPSRAM
-#define DMA1_BASEADDR                    0x40026000U   // Base address of DMA1
-#define DMA2_BASEADDR                    0x40026400U   // Base address of DMA2
-#define USB_OTG_HS_BASEADDR              0x40040000U   // Base address of USB_OTG_HS
-
-// defining base address for Peripherals hanging on AHB2 Bus
-#define USB_OTG_FS_BASEADDR              0x50000000U   // Base address of USB_OTG_FS
-#define DCMI_BASEADDR                    0x50050000U   // Base address of DCMI
-
-
-// defining base address for Peripherals hanging on AHB3 Bus
-
-#define FMC_bank_1_BASEADDR               0x60000000U  // Base address of FMC bank 1
-#define FMC_bank_3_BASEADDR               0x80000000U  // Base address of FMC bank 3
-#define QuadSPI_BASEADDR                  0x90000000U  // Base address of QuadSPI
-#define FMC_control_register_BASEADDR     0xA0000000U  // Base address of FMC control register
-#define QuadSPI_control_register_BASEADDR 0xA0001000U  // Base address of QuadSPI control register
-#define FMC_bank_5_BASEADDR               0xC0000000U  // Base address of FMC bank 5
-#define FMC_bank_6_BASEADDR               0xD0000000U  // Base address of FMC bank 6
-
-// defining base address for Peripherals hanging on APB1 Bus
-#define TIM2_BASEADDR                    0x40000000U   // Base address of TIM2
-#define TIM3_BASEADDR                    0x40000400U   // Base address of TIM3
-#define TIM4_BASEADDR                    0x40000800U   // Base address of TIM4
-#define TIM5_BASEADDR                    0x40000C00U   // Base address of TIM5
-#define TIM6_BASEADDR                    0x40001000U   // Base address of TIM6
-#define TIM7_BASEADDR                    0x40001400U   // Base address of TIM7
-#define TIM12_BASEADDR                   0x40001800U   // Base address of TIM12
-#define TIM13_BASEADDR                   0x40001C00U   // Base address of TIM13
-#define TIM14_BASEADDR                   0x40002000U   // Base address of TIM14
-#define RTC_BKP_Registers                0x40002800U   // Base address of RTC_&_BKP Registers
-#define WWDG                             0x40002C00U   // Base address of WWDG
-#define IWDG                             0x40003000U   // Base address of IWDG
 #define SPI2_I2S2_BASEADDR               0x40003800U   // Base address of SPI2 / I2S2
 #define SPI3_I2S3_BASEADDR               0x40003C00U   // Base address of SPI3 / I2S3
-#define SPDIFRX                          0x40004000U   // Base address of SPDIFRX
 #define USART2_BASEADDR                  0x40004400U   // Base address of USART2
 #define USART3_BASEADDR                  0x40004800U   // Base address of USART3
 #define UART4_BASEADDR                   0x40004C00U   // Base address of UART4
@@ -116,44 +37,14 @@
 #define I2C1_BASEADDR                    0x40005400U   // Base address of I2C1
 #define I2C2_BASEADDR                    0x40005800U   // Base address of I2C2
 #define I2C3_BASEADDR                    0x40005C00U   // Base address of I2C3
-#define FMPI2C1                          0x40006000U   // Base address of FMPI2C1
-#define CAN1                             0x40006400U   // Base address of CAN1
-#define CAN2                             0x40006800U   // Base address of CAN2
-#define HDMI_CEC                         0x40006C00U   // Base address of HDMI-CEC
-#define PWR                              0x40007000U   // Base address of PWR
-#define DAC                              0x40007400U   // Base address of DAC
-
-
-
-// defining base address for Peripherals hanging on APB2 Bus
-
-#define TIM1_BASEADDR                     0x40010000U  // Base address of TIM1
-#define TIM8_BASEADDR                     0x40010400U  // Base address of TIM8
 #define USART1_BASEADDR                   0x40011000U  // Base address of USART1
 #define USART6_BASEADDR                   0x40011400U  // Base address of USART6
-#define ADC1_BASEADDR                     0x40012000   // Base address of ADC1
-#define ADC2_BASEADDR                     (ADC1_BASEADDR + 0x100) // Base address of ADC2
-#define ADC3_BASEADDR                     (ADC1_BASEADDR + 0x200) // Base address of ADC3
-#define SDIO_BASEADDR                     0x40012C00U  // Base address of SDIO
 #define SPI1_BASEADDR                     0x40013000U  // Base address of SPI1
 #define SPI4_BASEADDR                     0x40013400U  // Base address of SPI4
 #define SYSCFG_BASEADDR                   0x40013800U  // Base address of SYSCFG
-#define EXTI_BASEADDR                     0x40013C00U  // Base address of EXTI
-#define TIM9_BASEADDR                     0x40014000U  // Base address of TIM9
-#define TIM10_BASEADDR                    0x40014400U  // Base address of TIM10
-#define TIM11_BASEADDR                    0x40014800U  // Base address of TIM11
-#define SAI1_BASEADDR                     0x40015800U  // Base address of SAI1
-#define SAI2_BASEADDR                     0x40015C00U  // Base address of SAI2
 
 
-
-/* =====================********************** Peripheral Structure creation****************************************************
-                                                @GPIO(General purpose input and output)
-                                                @RCC(Reset clock and control)
-                                                @EXTI(Interrupts and events)
-                                                @SYSCFG(System configuration controller)
-                                                @SPI(Serial peripheral interface)
-
+/*  Peripheral Structure creation
 
 */
 //Peripheral structure creation for GPIOx ports
@@ -215,20 +106,6 @@ typedef struct {
 
  // GPIO_Regdef_t *GPIOA =(GPIO_Regdef_t*) MODER; // Can also be written as macro below
 
-//Peripheral structure creation for EXTI peripheral
-
-typedef struct
-{
-	__vo uint32_t IMR;            // Base address of EXTI_IMR
-	__vo uint32_t EMR;            // Base address of EXTI_EMR
-	__vo uint32_t RTSR;          // Base address of EXTI_RTSR
-	__vo uint32_t FTSR;         // Base address of  EXTI_FTSR
-	__vo uint32_t SWIER;       // Base address of EXTI_SWIER
-	__vo uint32_t PR;         // Base address of EXTI_PR
-
-
-
-}EXTI_Regdef_t;
 
 //Peripheral structure creation for SYSCFGperipheral
 typedef struct
@@ -277,14 +154,7 @@ typedef struct
 
 }I2C_Regdef_t;
 
-/* =====================********************** Peripheral Structure definition creation****************************************************
-                                                @GPIO(General purpose input and output)
-                                                @RCC(Reset clock and control)
-                                                @EXTI(Interrupts and events)
-                                                @SYSCFG(System configuration controller)
-                                                @SPI(Serial peripheral interface)
-
-
+/*  Peripheral Structure definition creation
 */
 
 // Peripheral definitions of GPIO
@@ -323,12 +193,8 @@ typedef struct
 
 
 
-/* =====================**********************  Enable the  clock for  peripherals****************************************************
-                                                @GPIO(General purpose input and output)
-                                                @RCC(Reset clock and control)
-                                                @EXTI(Interrupts and events)
-                                                @SYSCFG(System configuration controller)
-                                                @SPI(Serial peripheral interface)
+/* Enable the  clock for  peripherals
+
 
 
 */
@@ -372,13 +238,7 @@ typedef struct
 
 
 
-/* =====================**********************  Disable the  clock for  peripherals****************************************************
-                                                @GPIO(General purpose input and output)
-                                                @RCC(Reset clock and control)
-                                                @EXTI(Interrupts and events)
-                                                @SYSCFG(System configuration controller)
-                                                @SPI(Serial peripheral interface)
-
+/*  Disable the  clock for  peripherals
 
 */
 // Disable the GPIO clock peripherals
@@ -470,40 +330,8 @@ typedef struct
                   								(x == GPIOH)?7:0)
 
 
-// Macros for IRQ number(Interrupt Request) of STM32f446Rx MCU
 
-#define IRQ_NO_EXTI0              6
-#define IRQ_NO_EXTI1              7
-#define IRQ_NO_EXTI3              9
-#define IRQ_NO_EXTI4              10
-#define IRQ_NO_EXTI9_5            23
-#define IRQ_NO_EXTI15_10          40
-
-
-// MACROS for all possible priority levels
-
-#define NVIC_IRQ_PRI0             0
-#define NVIC_IRQ_PRI1             1
-#define NVIC_IRQ_PRI2             2
-#define NVIC_IRQ_PRI3             3
-#define NVIC_IRQ_PRI4             4
-#define NVIC_IRQ_PRI5             5
-#define NVIC_IRQ_PRI6             6
-#define NVIC_IRQ_PRI7             7
-#define NVIC_IRQ_PRI8             8
-#define NVIC_IRQ_PRI9             9
-#define NVIC_IRQ_PRI10            10
-#define NVIC_IRQ_PRI11            11
-#define NVIC_IRQ_PRI12            12
-#define NVIC_IRQ_PRI13            13
-#define NVIC_IRQ_PRI14            14
-#define NVIC_IRQ_PRI15            15
-
-
-/***************************************************************************************************************************************
- * Bit position definitions of SPI peripheral
- ***************************************************************************************************************************************/
-      // Bit position macros for CR1 register
+ // Bit position macros for CR1 register
 #define  SPI_CR1_CPHA            0
 #define  SPI_CR1_CPOL            1
 #define  SPI_CR1_MSTR            2
@@ -541,11 +369,7 @@ typedef struct
 #define  SPI_SR_BSY              7
 #define  SPI_SR_FRE              8
 
-
-/***************************************************************************************************************************************
- * Bit position definitions of I2C peripheral
- ***************************************************************************************************************************************/
-      // Bit position macros for CR1 register
+// Bit position macros for CR1 register
 
 #define  I2C_CR1_PE              0
 #define  I2C_CR1_SMBUS           1
