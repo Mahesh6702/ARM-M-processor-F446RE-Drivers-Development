@@ -19,5 +19,11 @@ Testing developed libraries using basic projects.
 
  <a name="headers"/>
  
-## Mcu_strcuture_headerfile
+## 1.Mcu_strcuture_headerfile
 This header file contains the base address peripherals like (GPIOX, SPIX,I2CX,USARTX/UARTX,TIMERSX..etc) lieing on buses(APHB1, APHB2, APHB3, APB1, APB2). And some of the peripherals structure of GPIOX, SPIX,I2CX. Even with the required macros of communicaiton protocols.
+## 2.GPIO_headerfile
+## 3.SPI_headerfile
+## 4.I2C_headerfile
+## 5.GPIO_library
+## 6.SPI_library
+## 7.I2C_library
