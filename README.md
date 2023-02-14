@@ -16,7 +16,5 @@ Testing developed libraries using basic projects.
 [](#emphasis)   
 [7.I2C_library](#headers)
 [](#emphasis)   
- 
-...snip...    
-<This header file contains base address peripherals lieing on all buses <a name="headers"/>
-## Headers
+ <a name="headers"/>
+## Mcu_strcuture_headerfile
