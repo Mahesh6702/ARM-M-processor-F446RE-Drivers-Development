@@ -16,7 +16,8 @@ Testing developed libraries using basic projects.
 [](#emphasis)   
 [7.I2C_library](#headers)
 [](#emphasis)   
-<Inc/stm32f446xx.h#<Mcu_strcuture_headerfile>
+
  <a name="headers"/>
  
 ## Mcu_strcuture_headerfile
+This header file contains the base address peripherals like (GPIOX, SPIX,I2CX,USARTX/UARTX,TIMERSX..etc) lieing on buses(APHB1, APHB2, APHB3, APB1, APB2). And some of the peripherals structure of GPIOX, SPIX,I2CX. Even with the required macros of communicaiton protocols.
