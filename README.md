@@ -1,2 +1,3 @@
 # ARM-M-processor-F446RE-Drivers-Inc-Src
-Drivers(GPIO, I2C, SPI, USART/UART) development for STM32F446RE (Bare metal programming) using C programming.
+Development of drivers for GPIO, I2C and SPI by understanding user manual and datasheet for STM32f446RE microcontroller.
+Testing developed libraries using basic projects.
