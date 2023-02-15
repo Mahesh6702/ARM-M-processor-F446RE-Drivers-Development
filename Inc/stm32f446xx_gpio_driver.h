@@ -90,9 +90,6 @@ typedef struct
  *                                 @GPIO_WriteToOutputPin
  *                                 @GPIO_WriteToOutputPort
  *                                 @GPIO_ToggleOutputPi
- *                                 @GPIO_IRQInterruptConfig
- *                                 @GPIO_IRQPriorityConfig
- *                                 @GPIO_IRQHandling
  *
  * */
 
@@ -113,11 +110,5 @@ void GPIO_WriteToOutputPin(GPIOx_Regdef_t *pGPIOx, uint8_t PinNumber, uint8_t Va
 void GPIO_WriteToOutputPort(GPIOx_Regdef_t *pGPIOx,  uint16_t Value);
 void GPIO_ToggleOutputPin(GPIOx_Regdef_t *pGPIOx, uint8_t PinNumber);
 
-
-
-// IRQ Configuration and ISR handling
-void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi);
-void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRQPriority);
-void GPIO_IRQHandling(uint8_t PinNumber);
 
 #endif /* INC_STM32F446XX_GPIO_DRIVER_H_ */
