@@ -6,11 +6,11 @@
 2. [GPIO_headerfile](#example2)
 3. [SPI_headerfile](#third-example)
 4. [I2c_headerfile](#fourth-example)
-5. [GPIO_library](#fourth-example)
-6. [SPI_library](#fourth-example)
-7. [I2C_library](#fourth-example)
-8. [Documents](#fourth-example)
-9. [I2c_headerfile](#fourth-example)
+5. [GPIO_library](#fifth-example)
+6. [SPI_library](#sixth-example)
+7. [I2C_library](#seventh-example)
+8. [Projects](#eighth-example)
+9. [Documents](#nineth-example)
 
  <a name="headers"/>
  
