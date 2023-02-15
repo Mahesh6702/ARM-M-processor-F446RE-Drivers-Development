@@ -39,5 +39,7 @@ Spi library contians funciton definitions for the funciton declare in the header
 It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData API's mentioned in the I2C headerfile.
 ## 8.Projects
 ## 9.Documents
-(https://[pages.github.com](https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)/).
-Schematic, Reference manual and datasheets is avilable in the following below links
+# Schematic, Reference manual and datasheets is avilable in the following below links
+# Reference manual(https://[pages.github.com](https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)/).
+(https://[pages.github.com]([https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf](https://www.st.com/resource/en/datasheet/stm32f446re.pdf))/).
+
