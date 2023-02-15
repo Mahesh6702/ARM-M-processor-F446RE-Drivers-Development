@@ -14,12 +14,11 @@
 [6.SPI_library](#headers)
 [](#emphasis)   
 [7.I2C_library](#headers)
-[](#emphasis)   
-[8.Projects](#headers)
-[   ](#emphasis) 
-<a name="headers"/>
-[9.Documents](#headers)
+[](#emphasis)  
+[8.Documents](#headers)
 [  ](#emphasis) 
+[9.Projects](#headers)
+[   ](#emphasis) 
 
  <a name="headers"/>
  
@@ -37,12 +36,13 @@ This library contains the defintion for Intialise, Deintialise, Toggle, read and
 Spi library contians funciton definitions for the funciton declare in the header file
 ### 7.I2C_library
 It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData API's mentioned in the I2C headerfile.
-### 8.Projects
-The created libraries are tested with a simple project.
-Using SPI protocol, a communication is established between ST microcontroller and Arduino. ST controller has master, which been sending char array data "Hello World" was received at the slave arduino sucessfully.
-### 9.Documents
+### 8.Documents
 Schematic, Reference manual and datasheet is avilable in the following below links
 Reference manual(https://[pages.github.com](https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)/).
 Datasheet(https://[pages.github.com](https://www.st.com/resource/en/datasheet/stm32f446re.pdf))/).
 Schematic (https://[pages.github.com](https://www.st.com/en/evaluation-tools/nucleo-f446re.html#cad-resources)/).
+### 9.Projects
+The created libraries are tested with a simple project.
+Using SPI protocol, a communication is established between ST microcontroller and Arduino. ST controller has master, which been sending char array data "Hello World" was received at the slave arduino sucessfully.
+
 
