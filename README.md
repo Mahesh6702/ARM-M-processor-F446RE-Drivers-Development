@@ -34,5 +34,5 @@ This library contains the defintion for Intialise, Deintialise, Toggle, read and
 ## 6.SPI_library
 Spi library contians funciton definitions for the funciton declare in the header file
 ## 7.I2C_library
-It contians defintions for the following API's mentioned in the I2C headerfile.
+It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData API's mentioned in the I2C headerfile.
 ## 8.Projects
