@@ -18,25 +18,7 @@ static void I2C_ExecuteAddressPhase(I2C_Regdef_t *pI2C, uint8_t SlaveAddress);
 static void  I2C_ClearADDRFlag(I2C_Regdef_t *PI2Cx);
 static void I2C_GenerateStopCondition(I2C_Regdef_t  *pI2Cx);
 
-
-
-
-
-/**********************************************************************
- * @fn               - I2C_GenerateStartConditio
- *
- * @brief            - This function generates the start condition for  I2C
- *
- * @param[in]        - Base address of the given I2C
- * @param[in]        -
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-
+//This function generates the start condition for  I2C
 static void I2C_GenerateStartCondition(I2C_Regdef_t  *pI2Cx)
 {
 	pI2Cx->CR1 |= (1 << I2C_CR1_START); // Start bit is enabled in the CR1 register
@@ -64,22 +46,8 @@ static void I2C_ExecuteAddressPhase(I2C_Regdef_t *pI2Cx, uint8_t SlaveAddress)
 	pI2Cx->DR = SlaveAddress;
 
 }
-/**********************************************************************
- * @fn               - I2C_ClearADDRFlag
- *
- * @brief            - This function generates the start condition for  I2C
- *
- * @param[in]        - Base address of the given I2C
- * @param[in]        -
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
 
- */
-
-
+//This function generates the start condition for  I2C
 void static I2C_ClearADDRFlag(I2C_Regdef_t *pI2Cx)
 {
 
@@ -88,20 +56,8 @@ void static I2C_ClearADDRFlag(I2C_Regdef_t *pI2Cx)
 	(void)dummyRead;
 
 }
-/**********************************************************************
- * @fn               - I2C_GenerateStopCondition
- *
- * @brief            - This function generates the stops condition for  I2C
- *
- * @param[in]        - Base address of the given I2C
- * @param[in]        -
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
 
- */
+//This function generates the stops condition for  I2C
 
 static void I2C_GenerateStopCondition(I2C_Regdef_t  *pI2Cx)
 {
@@ -109,34 +65,7 @@ static void I2C_GenerateStopCondition(I2C_Regdef_t  *pI2Cx)
 
 }
 
-
-/* ================================Creation of API's prototype =======================================
- *                                 @I2C_PeripheralControl
- *                                 @I2C_PeriClockControl
- *                                 @I2C_PeriClockControl
- *                                 @I2C_Init
- *                                 @I2C_DeInit
- *                                 @I2C_MasterSendData
- *                                 @SPI_IRQInterruptConfig
- *                                 @SPI_IRQPriorityConfig
- *                                 @SPI_IRQHandling
- *
- * */
-// Peripheral Control setup
-/**********************************************************************
- * @fn               - I2C_PeripheralControl
- *
- * @brief            - This function enables or disables peripheral for the given I2C
- *
- * @param[in]        - Base address of the given I2C
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
+//This function enables or disables peripheral for the given I2C
 void I2C_PeripheralControl(I2C_Regdef_t *pI2Cx, uint8_t EnorDi)
 {
 	if(EnorDi == ENABLE)
@@ -147,23 +76,6 @@ void I2C_PeripheralControl(I2C_Regdef_t *pI2Cx, uint8_t EnorDi)
 	}
 }
 
-
-
-// Peripheral Clock setup
-/**********************************************************************
- * @fn               - I2C_PeriClockControl
- *
- * @brief            - This function enables or disables peripheral clock for the given I2C
- *
- * @param[in]        - Base address of the given I2C
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
 
 
 // Peripheral Clock setup
@@ -202,22 +114,6 @@ void I2C_PeriClockControl(I2C_Regdef_t *pI2Cx, uint8_t EnorDi)
 	  }
 
 }
-/************************************     Init and De-init  *****************************************
- *
- * @fn               -I2C_Init
- *
- * @brief            - This function initialise all the required configuration for  the given I2C port
- *
- * @param[in]        - Base address of the given SPI port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-
 
 // Init and De-init
 
@@ -324,21 +220,6 @@ void I2C_Init(I2C_Handle_t  *pI2CHandle)
 
 }
 
-/**********************************************************************
- * @fn               -  I2C_DeInit
- *
- * @brief            - This function enables or disables peripheral clock for the given I2C
- *
- * @param[in]        - Base address of the given SPI
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-
 
 void I2C_DeInit(I2C_Regdef_t  *pI2Cx)
 {
@@ -369,20 +250,7 @@ uint8_t I2C_GetFlagStatus(I2C_Regdef_t *pI2Cx, uint32_t FlagName)
 	return FLAG_RESET;
  }
 
-/**********************************************************************
- * @fn               -  I2C_MasterSendData
- *
- * @brief            - This function sends the data, as master mode
- *
- * @param[in]        - Base address of the given I2C
- * @param[in]        - transmitted buffer data
- * @param[in]        - length of buffer
- *@param[in]         - Address of the slave device
- * @return           - None
- *
- * @Note             * None
-
- */
+// This function sends the data, as master mode
 
 void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTxbuffer, uint32_t Len, uint32_t SlaveAddress )
 {
