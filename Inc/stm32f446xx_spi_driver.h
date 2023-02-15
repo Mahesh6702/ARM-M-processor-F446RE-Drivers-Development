@@ -128,10 +128,6 @@ void SPI_SendData(SPI_Regdef_t  *pSPIx,uint8_t *pTxBuffer, uint32_t Len);
 
 void SPI_ReceiveData(SPI_Regdef_t  *pSPIx,uint8_t *pRxBuffer, uint32_t Len);
 
-// IRQ Configuration and ISR handling
-void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi);
-void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRQPriority);
-void SPI_IRQHandling(SPI_Handle_t *pHandle);
 
 // other peripheral control APIs
 
