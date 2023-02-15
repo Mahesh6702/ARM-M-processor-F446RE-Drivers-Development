@@ -41,6 +41,6 @@ It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData A
 ### 9.Documents
 #### Schematic, Reference manual and datasheet is avilable in the following below links
 #### Reference manual(https://[pages.github.com](https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)/).
-#### Datasheet(https://[pages.github.com]([https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf](https://www.st.com/resource/en/datasheet/stm32f446re.pdf))/).
+#### Datasheet(https://[pages.github.com](https://www.st.com/resource/en/datasheet/stm32f446re.pdf))/).
 #### Schematic (https://[pages.github.com](https://www.st.com/en/evaluation-tools/nucleo-f446re.html#cad-resources)/).
 
