@@ -37,22 +37,9 @@ Spi library contians funciton definitions for the funciton declare in the header
 ### 7.I2C_library
 It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData API's mentioned in the I2C headerfile.
 ### 8.Projects
-Time period calculation
-Timer "Period" value Calculation 	
-	
-	
-TIMER Clock Frequency (TIMx_CLK)	50000000
-	
-Prescaler 	4999
-	
-TIMER Count Clock(CNT_CLK)	10000
-	
-Time Period of CNT_CLK	0.0001
-	
-Period Value(ARR)	10000
-	
+#### Time period calculation
 Time base Required 	1
-![image](https://user-images.githubusercontent.com/79939325/218899300-7c2c5988-f734-4c88-a9b2-e0f6f6204ca6.png)
+### ![image](https://user-images.githubusercontent.com/79939325/218899300-7c2c5988-f734-4c88-a9b2-e0f6f6204ca6.png)
 
 ### 9.Documents
 #### Schematic, Reference manual and datasheet is avilable in the following below links
