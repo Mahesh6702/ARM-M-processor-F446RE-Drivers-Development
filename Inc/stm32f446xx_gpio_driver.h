@@ -82,14 +82,6 @@ typedef struct
 
 
 /* ================================Creation of API's prototype =======================================
- *                                 @GPIO_PeriClockControl
- *                                 @GPIO_Init
- *                                 @GPIo_DeInit
- *                                 @GPIO_ReadFromInputPi
- *                                 @GPIO_ReadFromInputPort
- *                                 @GPIO_WriteToOutputPin
- *                                 @GPIO_WriteToOutputPort
- *                                 @GPIO_ToggleOutputPi
  *
  * */
 
