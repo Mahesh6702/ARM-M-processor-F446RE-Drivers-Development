@@ -11,7 +11,7 @@
 #include<stdint.h>
 
 
-// Configuration structure of SPIx peripheral
+// Configuration structure ofI2Cx peripheral
 typedef struct
 {
 	uint8_t I2C_SCLSpeed;       // I2C speed, normal mode or fast mode(1MHz / 4 MHz)
