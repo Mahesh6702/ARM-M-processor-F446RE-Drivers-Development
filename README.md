@@ -37,8 +37,9 @@ Spi library contians funciton definitions for the funciton declare in the header
 ### 7.I2C_library
 It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData API's mentioned in the I2C headerfile.
 ### 8.Projects
-#### Time period calculation
-Time base Required 	1
+The created libraries are tested with a simple project.
+Using SPI protocol, a communication is established between ST microcontroller and Arduino. ST controller has master, which been sending char array data "Hello World" was received at the slave arduino sucessfully.
+Time period calculation
 ### ![image](https://user-images.githubusercontent.com/79939325/218899300-7c2c5988-f734-4c88-a9b2-e0f6f6204ca6.png)
 
 ### 9.Documents
