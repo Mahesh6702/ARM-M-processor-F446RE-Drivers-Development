@@ -10,36 +10,6 @@
 
 #include <stdint.h>
 
-
-/* ================================Creation of API's prototype =======================================
- *                                 @SPIO_PeriClockControl
- *                                 @SPI_Init
- *                                 @SPI_DeInit
- *                                 @SPI_SendData
- *                                 @SPI_ReceiveData
- *                                 @SPI_IRQInterruptConfig
- *                                 @SPI_IRQPriorityConfig
- *                                 @SPI_IRQHandling
- *
- * */
-
-
-// Peripheral Clock setup
-/**********************************************************************
- * @fn               - SPIO_PeriClockControl
- *
- * @brief            - This function enables or disables peripheral clock for the given SPI
- *
- * @param[in]        - Base address of the given SPI
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-
 // Peripheral Clock setup
 
 
@@ -79,22 +49,7 @@ void SPI_PeriClockControl(SPI_Regdef_t *pSPIx, uint8_t EnorDi)
 
 }
 
-
-/*****************************     Init and De-init  *****************************************
- *
- * @fn               - SPI_Init
- *
- * @brief            - This function initialise all the required configuration for  the given SPI port
- *
- * @param[in]        - Base address of the given SPI port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
+//This function initialise all the required configuration for  the given SPI port
 
 void SPI_Init(SPI_Handle_t  *pSPIHandle)
 {
@@ -145,21 +100,7 @@ void SPI_Init(SPI_Handle_t  *pSPIHandle)
 
 }
 
-
-
-/**********************************************************************
- * @fn               - SPI_DeInit
- *
- * @brief            - This function enables or disables peripheral clock for the given SPI
- *
- * @param[in]        - Base address of the given SPI
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- * @Note             * None
-
- */
+//This function enables or disables peripheral clock for the given SPI
 void SPI_DeInit(SPI_Regdef_t  *pSPIx)
 {
 
@@ -189,21 +130,6 @@ uint8_t SPI_GetFlagStatus(SPI_Regdef_t *pSPIx, uint32_t FlagName)
 
 	return FLAG_RESET;
 }
-
-
-/**********************************************************************
- * @fn               - SPI_SendDatal
- *
- * @brief            - This function sends the data from MCU(Master) to any sepicified slave using spi protocol
- * @param[in]        - Base address of the given GPIO port
- * @param[in]        - Transmitter buffer register
- * @param[in]        - Length of the buffer register
- *
- * @return           - None
- *
- * @Note             * Blocking calls (while( SPI_GetFlagStatus(pSPIx, SPI_TXE_FLAG) == FLAG_RESET);) CAN BE BLOCKED PERMANNETLY
-
- */
 
 // Data Send and Receive
 
@@ -238,110 +164,7 @@ void SPI_SendData(SPI_Regdef_t  *pSPIx,uint8_t *pTxBuffer, uint32_t Len)
    }
 }
 
-
-
-/**********************************************************************
- * @fn               - SPI_ReceiveData
- *
- * @brief            - This function receives the data from slave to MCU using spi protocol
- *
- * @param[in]        - Receiver buffer
- * @param[in]        - Length of the receiver buffer
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-void SPI_ReceiveData(SPI_Regdef_t  *pSPIx,uint8_t *pRxBuffer, uint32_t Len)
-{
-
-
-}
-
-// IRQ Configuration and ISR handling
-
-/**********************************************************************
- * @fn               - SPI_IRQInterruptConfig
- *
- * @brief            - This function enables or disables peripheral clock for the given GPIO port
- *
- * @param[in]        - Base address of the given GPIO port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi)
-{
-
-
-}
-
-// Peripheral Clock setup
-/**********************************************************************
- * @fn               - SPI_IRQPriorityConfig
- *
- * @brief            - This function enables or disables peripheral clock for the given GPIO port
- *
- * @param[in]        - Base address of the given GPIO port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRQPriority)
-{
-
-
-}
-
-
-// Peripheral Clock setup
-/**********************************************************************
- * @fn               - SPI_IRQHandling
- *
- * @brief            - This function enables or disables peripheral clock for the given GPIO port
- *
- * @param[in]        - Base address of the given GPIO port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-void SPI_IRQHandling(SPI_Handle_t *pHandle)
-{
-
-
-}
-
-
-/**********************************************************************
- * @fn               - SPI_PeripheralControl
- *
- * @brief            - This function enables the clock for the spi peripheral
- *
- * @param[in]        - Base address of the given SPIx port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * None
-
- */
-
-
+//This function enables the clock for the spi peripheral
 void SPI_PeripheralControl(SPI_Regdef_t *pSPIx, uint8_t EnorDi)
 {
 	if(EnorDi == ENABLE)
@@ -352,21 +175,6 @@ void SPI_PeripheralControl(SPI_Regdef_t *pSPIx, uint8_t EnorDi)
 	}
 }
 
-
-/**********************************************************************
- * @fn               - SPI_SSIConfigure
- *
- * @brief            - This function sets SSI bit
- *
- * @param[in]        - Base address of the given GPIO port
- * @param[in]        - Enable or Disable
- * @param[in]        -
- *
- * @return           - None
- *
- * @Note             * Clears the SSI, in order to overcome the MODEF error(By NSS bit is internally connected +vcc)
-
- */
 
 
 void SPI_SSIConfigure(SPI_Regdef_t *pSPIx, uint8_t EnorDi)
