@@ -1,4 +1,4 @@
-# Driver development for (GPIO, I2C and SPI) STM32f446RE
+## Driver development for (GPIO, I2C and SPI) STM32f446RE
 ## Development of communication protocols libraries by understanding user manual and datasheet microcontroller.
 ### Table of Contents  
 [1.Mcu_strcuture_headerfile](#headers)
@@ -39,10 +39,8 @@ It contians defintions for the PeripheralControl, Init, DeInit, MasterSendData A
 ### 8.Projects
 The created libraries are tested with a simple project.
 Using SPI protocol, a communication is established between ST microcontroller and Arduino. ST controller has master, which been sending char array data "Hello World" was received at the slave arduino sucessfully.
-Time period calculation
-### ![image](https://user-images.githubusercontent.com/79939325/218899300-7c2c5988-f734-4c88-a9b2-e0f6f6204ca6.png)
-
 ### 9.Documents
+
 #### Schematic, Reference manual and datasheet is avilable in the following below links
 #### Reference manual(https://[pages.github.com](https://www.st.com/resource/en/reference_manual/dm00135183-stm32f446xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)/).
 #### Datasheet(https://[pages.github.com](https://www.st.com/resource/en/datasheet/stm32f446re.pdf))/).
